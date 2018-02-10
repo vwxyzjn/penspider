@@ -29,9 +29,8 @@ if __name__ == "__main__":
             pen_list = temp_list
             for item in pen_list:  # and the said new pen is unsold
                 if "SOLD" not in item:
-                    if "wahl" in item.lower():
-                        gmail.send(gmail.create_message('Shengyi Huang <vwxyzjn@gmail.com>','shengyi.huang@furman.edu', 'Fountain pen found', str(pen_list[:2])))  # if there is unsold item, send me an email
-                        break
+                    gmail.send(gmail.create_message('Shengyi Huang <vwxyzjn@gmail.com>','shengyi.huang@furman.edu', 'Fountain pen found', str(pen_list[:2])))  # if there is unsold item, send me an email
+                    break
         logger.info(datetime.datetime.now())
         logger.info(str(pen_list[:1]))
         time.sleep(300)  # run the program every 5 mins
